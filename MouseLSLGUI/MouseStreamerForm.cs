@@ -22,14 +22,8 @@ namespace MouseLSLGUI
 
         private void createStreams()
         {
-            if (timestampCheckbox.Checked == true)
-            {
-                numDataPoints = 3;
-            }
-            else
-            {
-                numDataPoints = 2;
-            }
+            if (timestampCheckbox.Checked == true) {numDataPoints = 3;}
+            else {numDataPoints = 2;}
 
             info = new liblsl.StreamInfo("Mouse", "MousePos", numDataPoints, 500, liblsl.channel_format_t.cf_double64);
             outlet = new liblsl.StreamOutlet(info);
@@ -45,10 +39,7 @@ namespace MouseLSLGUI
 
                 killThread = false;
                 createStreams();
-                Thread thread = new Thread(() =>
-                {
-                    PushData();
-                });
+                Thread thread = new Thread(() => { PushData(); });
                 thread.Start();
             }
             else if (startLSLStream.Checked == false)
@@ -67,7 +58,6 @@ namespace MouseLSLGUI
         {
             double[] data = new double[numDataPoints];
             double timestamp;
-            Stopwatch sw = new Stopwatch();
             while (killThread == false)
             {
                 
