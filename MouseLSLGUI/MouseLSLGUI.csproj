@@ -49,7 +49,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="HighResolutionDateTime.cs" />
     <Compile Include="MouseStreamerForm.cs">
       <SubType>Form</SubType>
     </Compile>
