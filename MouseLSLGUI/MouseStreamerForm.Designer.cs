@@ -90,7 +90,6 @@
             this.typeLabel.Size = new System.Drawing.Size(114, 17);
             this.typeLabel.TabIndex = 3;
             this.typeLabel.Text = "Type: MousePos";
-            this.typeLabel.Click += new System.EventHandler(this.label2_Click);
             // 
             // MouseStreamerForm
             // 
